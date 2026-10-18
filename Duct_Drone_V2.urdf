@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Duct_Drone_V2">
+  <link
+    name="Centreshell">
+    <inertial>
+      <origin
+        xyz="-0.0023342546820663 0.00103887274289381 -0.00750572663135211"
+        rpy="0 0 0" />
+      <mass
+        value="0.167124264992762" />
+      <inertia
+        ixx="0.000216499235903279"
+        ixy="-6.83658332020774E-07"
+        ixz="-8.48093015706362E-07"
+        iyy="0.000212796995726425"
+        iyz="2.09186086272471E-07"
+        izz="0.00041554364171161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Centreshell.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Centreshell.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Arm1">
+    <inertial>
+      <origin
+        xyz="0.103972391102341 -0.0609405068571181 -0.0447157330536235"
+        rpy="0 0 0" />
+      <mass
+        value="0.239683934118358" />
+      <inertia
+        ixx="0.000896798669278969"
+        ixy="1.09062710212928E-05"
+        ixz="1.23488008665259E-06"
+        iyy="0.000909013769857827"
+        iyz="-7.23793426769191E-07"
+        izz="0.00166943700748277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm1"
+    type="fixed">
+    <origin
+      xyz="-0.159066272777783 -0.0894202227117767 -0.00264267895012726"
+      rpy="-2.9683689864442 0 3.14159265358979" />
+    <parent
+      link="Centreshell" />
+    <child
+      link="Arm1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Motor1">
+    <inertial>
+      <origin
+        xyz="0.000608811395125225 0.00035688258356889 -0.0163058779284641"
+        rpy="0 0 0" />
+      <mass
+        value="0.0088285529500607" />
+      <inertia
+        ixx="5.8393078000693E-07"
+        ixy="-1.81776841909784E-09"
+        ixz="1.39588073577741E-13"
+        iyy="5.85966740976749E-07"
+        iyz="-3.13665847594253E-12"
+        izz="9.6707268596357E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor1"
+    type="fixed">
+    <origin
+      xyz="0.10784 -0.063208 -0.063256"
+      rpy="3.1416 0 0" />
+    <parent
+      link="Arm1" />
+    <child
+      link="Motor1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Fan1">
+    <inertial>
+      <origin
+        xyz="0.000608811395125253 0.00035688258356889 -0.0163058779284641"
+        rpy="0 0 0" />
+      <mass
+        value="0.0088285529500607" />
+      <inertia
+        ixx="5.8393078000693E-07"
+        ixy="-1.81776841909784E-09"
+        ixz="1.39588073577715E-13"
+        iyy="5.85966740976749E-07"
+        iyz="-3.13665847589621E-12"
+        izz="9.6707268596357E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fan1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Motor1" />
+    <child
+      link="Fan1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm2">
+    <inertial>
+      <origin
+        xyz="7.50555454592794E-10 -0.0447157345793297 0.120515573590887"
+        rpy="0 0 0" />
+      <mass
+        value="0.23968392439523" />
+      <inertia
+        ixx="0.000915406175448603"
+        ixy="-2.58534679938287E-12"
+        ixz="1.72696275597912E-12"
+        iyy="0.00166943700670249"
+        iyz="1.43136508997799E-06"
+        izz="0.000890406262333018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm2"
+    type="fixed">
+    <origin
+      xyz="0.153492413789366 -0.0894202227117775 -0.00264267895012455"
+      rpy="-1.48254623217347 -0.149252489159676 -2.10755121513836" />
+    <parent
+      link="Centreshell" />
+    <child
+      link="Arm2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Motor2">
+    <inertial>
+      <origin
+        xyz="0.000608849903209641 -0.000356815237846031 -0.0163058929273749"
+        rpy="0 0 0" />
+      <mass
+        value="0.00882854440824577" />
+      <inertia
+        ixx="5.83929769324295E-07"
+        ixy="1.8178196866635E-09"
+        ixz="-2.544287255478E-12"
+        iyy="5.85965603021815E-07"
+        iyz="-1.74417534333757E-12"
+        izz="9.67072663424245E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor2"
+    type="fixed">
+    <origin
+      xyz="0 -0.0632562999999975 0.125"
+      rpy="1.57079632679489 1.0406437259673 0" />
+    <parent
+      link="Arm2" />
+    <child
+      link="Motor2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Fan2">
+    <inertial>
+      <origin
+        xyz="1.94606214766191E-05 6.85907164013622E-06 -0.00515332828337475"
+        rpy="0 0 0" />
+      <mass
+        value="0.00395332671648383" />
+      <inertia
+        ixx="2.83906236979813E-06"
+        ixy="2.44928642095936E-09"
+        ixz="-1.1662741712452E-10"
+        iyy="2.83517195819994E-06"
+        iyz="-3.52029618376802E-11"
+        izz="5.66021415149058E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fan2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Motor2" />
+    <child
+      link="Fan2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm3">
+    <inertial>
+      <origin
+        xyz="0.00553216517564571 0.00588313301995901 -0.0347418915746173"
+        rpy="0 0 0" />
+      <mass
+        value="0.0516011838961284" />
+      <inertia
+        ixx="5.34325275712436E-05"
+        ixy="3.44530274249511E-07"
+        ixz="2.2497409801645E-06"
+        iyy="5.00881522016723E-05"
+        iyz="6.02256503294891E-06"
+        izz="1.19864861208718E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm3"
+    type="fixed">
+    <origin
+      xyz="-0.00278692949420652 0.181263540028928 -0.00264267895012736"
+      rpy="1.65806278939459 0 0" />
+    <parent
+      link="Centreshell" />
+    <child
+      link="Arm3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Actuator">
+    <inertial>
+      <origin
+        xyz="-0.020877782230609 0.0473503742556356 -1.25172594511724E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.244995065705169" />
+      <inertia
+        ixx="0.00100937759513825"
+        ixy="-0.000263977695914496"
+        ixz="-7.93701389243149E-14"
+        iyy="0.00156568992866076"
+        iyz="9.4810498427883E-15"
+        izz="0.000904898795367905" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Actuator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Actuator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Actuator"
+    type="revolute">
+    <origin
+      xyz="0.011499 0.040201 -0.086"
+      rpy="3.1416 0 -3.1416" />
+    <parent
+      link="Arm3" />
+    <child
+      link="Actuator" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Motor3">
+    <inertial>
+      <origin
+        xyz="-3.98874803742011E-08 0.000705698351437245 -0.0163059423812842"
+        rpy="0 0 0" />
+      <mass
+        value="0.0088285142381621" />
+      <inertia
+        ixx="5.87027892356294E-07"
+        ixy="-1.84599203884271E-13"
+        ixz="2.90160859341245E-12"
+        iyy="5.82861078077653E-07"
+        iyz="-7.99307566762061E-13"
+        izz="9.67072531835109E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Motor3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor3"
+    type="fixed">
+    <origin
+      xyz="-0.031587 0.065531 0"
+      rpy="-1.5708 0 0.46787" />
+    <parent
+      link="Actuator" />
+    <child
+      link="Motor3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Fan3">
+    <inertial>
+      <origin
+        xyz="1.37664107156821E-05 -7.46242057741986E-06 -0.00515337431169186"
+        rpy="0 0 0" />
+      <mass
+        value="0.00395309050344822" />
+      <inertia
+        ixx="2.83878418004834E-06"
+        ixy="1.80136721679256E-09"
+        ixz="-1.7595469539873E-10"
+        iyy="2.83436103339261E-06"
+        iyz="5.27017285116184E-11"
+        izz="5.65912766340833E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Duct_Drone_V2/meshes/Fan3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fan3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Motor3" />
+    <child
+      link="Fan3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
